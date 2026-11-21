@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadingHub | Home</title>
+  <meta name="description" content="ReadingHub is a reading club where members discover books, join offerings and share reviews.">
+  <link rel="stylesheet" href="ReadingHubStyle.css">
+  <!-- Theme switcher + menu script: loaded in the head so the saved theme is applied before the page paints -->
+  <script src="js/site.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="home.html" aria-label="ReadingHub home">
+        <img src="images/Readinghub.png" alt="ReadingHub">
+      </a>
+
+      <div class="header-actions">
+        <!-- Theme button: switches between the two themes -->
+        <button type="button" class="theme-toggle" id="theme-toggle">&#9790;</button>
+        <!-- Menu button: only visible on small screens -->
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      </div>
+
+      <nav class="nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="home.html" aria-current="page">Home</a></li>
+          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="member-dashboard.html">Member Dashboard</a></li>
+          <li><a href="manager-dashboard.html">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Find your next favorite book.</h1>
+          <p class="lead">ReadingHub is a friendly reading club. Join our offerings, pick up the book of the month and swap thoughts with fellow members.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="offerings.html">Browse offerings</a>
+            <a class="btn btn-ghost" href="about.html">About us</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="images/girl.png" alt="Illustration of a girl reading a book">
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured offerings (Flexbox) -->
+    <section class="section" id="featured">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Featured offerings</h2>
+          <p>Three ways to get more out of your reading.</p>
+        </div>
+        <div class="card-row">
+          <article class="card" title="Mystery Night: a weekly evening of whodunits and book talk. Thursdays, 7 PM. Ages 16+. Snacks included.">
+            <div class="cover sage"><img src="images/offer1.jpeg" alt="Mystery Night" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Mystery Night</h3>
+              <p>Join us for a weekly evening of gripping whodunits. We discuss clues, twists and theories over snacks, so bring your detective hat.</p>
+            </div>
+          </article>
+          <article class="card" title="Poetry Workshop: write, share and get friendly feedback. Saturdays, 4 PM. All levels welcome. Bring a notebook.">
+            <div class="cover coral"><img src="images/poetry.jpg" alt="Poetry Workshop" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Poetry Workshop</h3>
+              <p>Write, share and get friendly feedback in a relaxed group. All levels are welcome, from first-time writers to regular poets.</p>
+            </div>
+          </article>
+          <article class="card" title="Kids Story Hour: read-aloud stories and a small craft. Sundays, 10 AM. Ages 4-9. Free for members.">
+            <div class="cover blush"><img src="images/offer3.jpg" alt="Kids Story Hour" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Kids Story Hour</h3>
+              <p>Read-aloud stories and a fun craft for young readers aged 4 to 9. It’s a gentle way to build a love of books early.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book of the month -->
+    <section class="section section-alt" id="book-of-the-month" aria-labelledby="botm-heading">
+      <div class="wrap">
+        <h2 id="botm-heading" class="visually-hidden">Book of the month</h2>
+        <div class="book">
+          <div>
+            <p class="tag">Book of this month</p>
+            <blockquote><q>Before the coffee gets cold</q></blockquote>
+            <p>Is a 2015 novel by Toshikazu Kawaguchi. It tells the story of a café in Tokyo that allows its customers to travel back in time, as long as they return before their coffee gets cold. </p>
+            <a class="btn btn-primary" href="offerings.html">Join the discussion</a>
+          </div>
+          <div class="cover gold"><img src="images/book.jpg" alt="Book of the month: Before the coffee gets cold" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews: one div per review -->
+    <section class="section" id="reviews">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Member reviews</h2>
+          <p>What our readers say about ReadingHub.</p>
+        </div>
+        <div class="grid-2">
+          <div class="review">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Every Thursday I look forward to Mystery Night. The book picks keep me guessing until the last page, and the discussions are even better than the stories.”</p>
+            <p class="reviewer">- Ahmed</p>
+            <p class="review-offer">Offering: Mystery Night</p>
+          </div>
+          <div class="review">
+            <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“I was nervous to share my writing, but the group was so kind and encouraging. I’ve written more in these few weeks than I did all last year.”</p>
+            <p class="reviewer">- Sara</p>
+            <p class="review-offer">Offering: Poetry Workshop</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 ReadingHub. All rights reserved. | Contact: <a href="mailto:info@ReadingHub.com">info@ReadingHub.com</a></p>
+      <!-- Real-time clock: updated every second by js/home.js -->
+      <p class="clock">Now: <time id="clock">Loading time...</time></p>
+      <ul class="social" aria-label="Social links">
+        <li><a href="https://www.facebook.com" aria-label="Facebook">f</a></li>
+        <li><a href="https://x.com" aria-label="X">X</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Back to top button: shown by js/home.js after scrolling down -->
+  <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>&uarr;</button>
+
+  <script src="js/home.js"></script>
+</body>
+</html>
