@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReadingHub | Manage Activity Leaders and Instructors</title>
+  <meta name="description" content="Add or remove ReadingHub activity leaders and instructors.">
+  <link rel="stylesheet" href="ReadingHubStyle.css">
+  <script src="js/site.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="home.html" aria-label="ReadingHub home">
+        <img src="images/Readinghub.png" alt="ReadingHub">
+      </a>
+      <div class="header-actions">
+        <button type="button" class="nav-toggle"
+                id="nav-toggle"
+                aria-expanded="false"
+                aria-controls="main-nav">Menu</button>
+      </div>
+
+      <nav class="nav" id="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="offerings.html">Offerings</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="member-dashboard.html">Member Dashboard</a></li>
+          <li><a href="manager-dashboard.html">Manager Dashboard</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-title">
+      <div class="wrap">
+        <p class="breadcrumb">
+          <a href="home.html">Home</a> &gt;
+          <a href="manager-dashboard.html">Manager Dashboard</a> &gt;
+          Manage activity leaders and instructors
+        </p>
+        <h1>Manage activity leaders and instructors</h1>
+        <p class="lead">Remove team members who are no longer active, or add a new activity leader or instructor.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap manager-content">
+
+        <hr class="form-divider">
+
+        <h2 class="section-title">Current team</h2>
+
+        <form class="leaders-form" action="#" method="post" onsubmit="return deleteLeaders()">
+            <table class="requests-table manager-table">
+              <caption class="visually-hidden">Activity leaders and instructors</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Select</th>
+                  <th scope="col">Photo</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Role</th>
+                </tr>
+              </thead>
+              <tbody id="leaders-body">
+              </tbody>
+            </table>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-danger">Delete</button>
+          </div>
+        </form>
+
+        <div class="actions-heading add-leader-heading">
+          <h2 class="section-title">Add new activity leader / instructor</h2>
+          <hr>
+        </div>
+
+        <form class="manager-form leader-form" id="add-leader-form" action="#" method="post" novalidate onsubmit="return addLeader()">
+          <div class="form-field">
+            <label for="leader-name">Name</label>
+            <input type="text" id="leader-name" name="leader-name" class="form-input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="leader-photo">Photo</label>
+            <div class="file-upload">
+              <input type="file" id="leader-photo" name="leader-photo" class="visually-hidden" accept="image/*">
+              <label for="leader-photo" class="btn btn-primary file-button">Upload file</label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="leader-dob">Date of Birth</label>
+            <input type="date" id="leader-dob" name="leader-dob" class="form-input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="leader-email">Email</label>
+            <input type="email" id="leader-email" name="leader-email" class="form-input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="leader-education">Education</label>
+            <input type="text" id="leader-education" name="leader-education" class="form-input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="leader-skills">Skills</label>
+            <input type="text" id="leader-skills" name="leader-skills" class="form-input" required>
+          </div>
+
+          <div class="form-field form-field-wide">
+            <label for="leader-expertise">Area of Expertise</label>
+            <input type="text" id="leader-expertise" name="leader-expertise" class="form-input" required>
+          </div>
+
+          <div class="form-actions form-field-wide">
+            <button type="submit" class="btn btn-primary">Add</button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 ReadingHub. All rights reserved. | Contact: <a href="mailto:info@ReadingHub.com">info@ReadingHub.com</a></p>
+      <ul class="social" aria-label="Social links">
+        <li><a href="https://www.facebook.com" aria-label="Facebook">f</a></li>
+        <li><a href="https://x.com" aria-label="X">X</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/manage-leaders.js"></script>
+</body>
+</html>
